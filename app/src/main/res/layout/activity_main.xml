@@ -14,14 +14,15 @@
         android:layout_marginBottom="40dp"
         android:ems="10"
         android:gravity="center"
-        android:hint="Enter Name"
+        android:hint="@string/name"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/editTextNumber"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/loadButton"
@@ -29,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="68dp"
-        android:text="LOAD"
+        android:text="@string/load"
         android:textAllCaps="false"
         app:layout_constraintEnd_toStartOf="@+id/saveButton"
         app:layout_constraintHorizontal_bias="0.147"
@@ -42,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:layout_marginEnd="75dp"
-        android:text="SAVE"
+        android:text="@string/save"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
@@ -54,11 +55,12 @@
         android:layout_marginTop="39dp"
         android:ems="10"
         android:gravity="center"
-        android:hint="Enter Age"
+        android:hint="@string/age"
         android:inputType="number"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextName"
+        android:autofillHints="" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,15 +27,30 @@ class MainActivity : AppCompatActivity() {
         age = findViewById(R.id.editTextNumber)
         save = findViewById(R.id.saveButton)
         load = findViewById(R.id.loadButton)
-    }
 
-    override fun onPause() {
-        super.onPause()
         save.setOnClickListener {
             saveData()
         }
 
     }
+    override fun onResume() {
+        super.onResume()
+
+        load.setOnClickListener {
+            loadData()
+        }
+
+    }
+
+    /*override fun onPause() {
+        super.onPause()
+
+        save.setOnClickListener {
+            saveData()
+        }
+
+    } */
+
 
     fun saveData()
     {
@@ -44,12 +59,12 @@ class MainActivity : AppCompatActivity() {
         userName = name.text.toString()
         userAge = age.text.toString().toInt()
 
-        val edit = sharedPreferences.edit()
+        var editor = sharedPreferences.edit()
 
-        edit.putString("name",userName)
-        edit.putInt("age", userAge!!)
+        editor.putString("name",userName)
+        editor.putInt("age", userAge!!)
 
-        edit.apply()
+        editor.apply()
     }
 
     fun loadData()
@@ -61,16 +76,18 @@ class MainActivity : AppCompatActivity() {
 
 
         name.setText(userName)
-        age.setText(""+ userAge)
+        age.setText(""+userAge)
 
     }
 
-    override fun onResume() {
+
+    /*override fun onResume() {
         super.onResume()
+
         load.setOnClickListener {
             loadData()
         }
 
-    }
+    }*/
 
 }
